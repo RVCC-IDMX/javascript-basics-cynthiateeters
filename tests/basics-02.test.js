@@ -31,7 +31,7 @@
    TODO: This skill requires 1 line of code.
    TODO: Use the let keyword to create a variable called myClass and assign it the string literal 'JavaScript is Awesome!'.
 */
-// * Add your code BELOW here
+let myClass = 'JavaScript is Awesome!';
 
 // * Don't mess with the test code below here!
 test('myClass', () => {
@@ -49,7 +49,7 @@ test('myClass', () => {
    TODO: This skill requires 1 line of code.
    TODO: Use the let keyword to create a variable called emptyString and assign it an empty string.
 */
-// * Add your code BELOW here
+let emptyString = '';
 
 // * Don't mess with the test code below here!
 test('emptyString', () => {
@@ -66,7 +66,7 @@ test('emptyString', () => {
    TODO: This skill requires 1 line of code.
    TODO: Use the let keyword to create a variable called petName and assign it any string with exactly 6 alphanumeric characters.
 */
-// * Add your code BELOW here
+let petName = 'Abc123';
 
 // * Don't mess with the test code below here!
 test('petName', () => {
@@ -83,7 +83,7 @@ test('petName', () => {
    TODO: This skill requires 1 line of code.
    TODO: Use the const keyword to create a constant called firstLetterIsA and assign it any word that starts with a capital A.
 */
-// * Add your code BELOW here
+const firstLetterIsA = 'Apple';
 
 // * Don't mess with the test code below here!
 test('firstLetterIsA', () => {
@@ -102,7 +102,7 @@ test('firstLetterIsA', () => {
    TODO: Use the let keyword to create a variable called counting and assign it the 7-character string literal 'one two'
    TODO: Ensure that the character between 'one' and 'two' is an escaped horizontal tab (\t), not a space.
 */
-// * Add your code BELOW here
+let counting = 'one\ttwo';
 
 // * Don't mess with the test code below here!
 test('counting', () => {
@@ -121,7 +121,7 @@ test('counting', () => {
    TODO: This skill requires 1 line of code.
    TODO: Use the let keyword to create a variable called mySentence and assign it to 'Hello, ' concatenated with petName.
 */
-// * Add your code BELOW here
+let mySentence = 'Hello, ' + petName;
 
 // * Don't mess with the test code below here!
 test('mySentence', () => {
@@ -141,7 +141,7 @@ test('mySentence', () => {
    TODO: Use the let keyword to create a variable called helloPet and assign it to a template literal
    TODO: that starts with 'Hello, ' and then includes petName using ${}.
 */
-// * Add your code BELOW here
+let helloPet = `Hello, ${petName}`;
 
 // * Don't mess with the test code below here!
 test('helloPet', () => {
@@ -162,7 +162,8 @@ test('helloPet', () => {
    TODO: In line 2, reassign thisMonth to the string 'September'.
    NOTE: The test ensures that thisMonth no longer equals 'I dunno!'.
 */
-// * Add your code BELOW here
+let thisMonth = 'I dunno!';
+thisMonth = 'September';
 
 // * Don't mess with the test code below here!
 test('thisMonth', () => {
@@ -184,7 +185,10 @@ test('thisMonth', () => {
      - Create a variable called message using a template literal that results in:
        'Hi, my name is John Smith and I was born in 2001'
 */
-// * Add your code BELOW here
+let year = 2001;
+let firstName = 'John';
+let lastName = 'Smith';
+let message = `Hi, my name is ${firstName} ${lastName} and I was born in ${year}`;
 
 // * Don't mess with the test code below here!
 test('creating a message', () => {
@@ -200,7 +204,9 @@ test('creating a message', () => {
        'Your total including tax is $108.25'
      - Hint: Use the expression ${price + tax} inside the template literal.
 */
-// * Add your code BELOW here
+let tax = 8.25;
+let price = 100;
+let total = `Your total including tax is $${price + tax}`;
 
 // * Don't mess with the test code below here!
 test('creating a total', () => {
@@ -215,7 +221,9 @@ test('creating a total', () => {
      - Create a variable called html using a template literal such that it results in:
        '<h1>JavaScript</h1><h2>HTML</h2><p>This is a paragraph</p>'
 */
-// * Add your code BELOW here
+let heading1 = 'JavaScript';
+let heading2 = 'HTML';
+let html = `<h1>${heading1}</h1><h2>${heading2}</h2><p>This is a paragraph</p>`;
 
 // * Don't mess with the test code below here!
 test('html', () => {
@@ -224,9 +232,9 @@ test('html', () => {
 });
 
 /* ==============================
-   RECAP & CHALLENGE
+   RECAP & REVIEW
    ==============================
-   Key Concepts Covered:
+   Key concepts covered:
      - Declaring string literals using single quotes.
      - Creating an empty string.
      - Understanding string length and zero-based indexing.

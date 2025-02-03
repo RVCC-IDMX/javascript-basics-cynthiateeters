@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Learning Skills for Basic JavaScript",
   "scripts": {
-    "test:1": "vitest tests/js-basic-01.test.js --globals --run --reporter verbose",
-    "test:2": "vitest tests/js-basic-02.test.js --globals --run --reporter verbose",
-    "test:3": "vitest tests/js-basic-03.test.js --globals --run --reporter verbose",
-    "test:4": "vitest tests/js-basic-04.test.js --globals --run --reporter verbose",
-    "test": "cd tests & vitest js-basic-01.test.js js-basic-02.test.js js-basic-03.test.js js-basic-04.test.js --silent --globals --run"
+    "test:1": "vitest tests/basics-01.test.js --globals --run --reporter verbose",
+    "test:2": "vitest tests/basics-02.test.js --globals --run --reporter verbose",
+    "test:3": "vitest tests/basics-03.test.js --globals --run --reporter verbose",
+    "test:4": "vitest tests/basics-04.test.js --globals --run --reporter verbose",
+    "test": "cd tests & vitest basics-01.test.js basics-02.test.js basics-03.test.js basics-04.test.js --silent --globals --run"
   },
   "keywords": [],
   "author": "",

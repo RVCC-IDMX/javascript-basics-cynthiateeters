@@ -1,5 +1,5 @@
 /*
- * @file: js-basic-04.test.js
+ * @file: basics-04.test.js
  * @title: Arithmetic in JavaScript, The Math Object, & Type Conversion
  *
  * Instructor Note:
@@ -14,33 +14,29 @@
  * Overview:
  *   In this assignment you will:
  *     - Declare numeric constants and perform arithmetic.
- *     - Use Math.random() to generate random floating-point numbers.
+ *     - Use Math.random() to generate random numbers.
  *     - Create random integers using Math.floor().
  *     - Use Math methods (floor, round) to round numbers appropriately.
- *     - Convert strings to numbers using parseInt() and the unary + operator.
+ *     - Convert strings to numbers using parseInt and the unary + operator.
  *     - Convert numbers to strings using .toFixed() to control decimal precision.
  */
 
 /* ==============================
    SKILL 1: Simple Arithmetic on Numbers 🍎
    ==============================
-   Explanation:
-   - Declare two numeric constants (a and b) and compute their sum (c).
-   - Using const demonstrates immutability; attempting to reassign should throw an error.
-
-   TODO: This skill requires 3 lines of code.
    TODO: Use the const keyword to declare:
-         - a with any number value.
-         - b with a different number value.
-         - c assigned to the sum of a and b.
+   - a with any number value.
+   - b with a different number value.
+   - c assigned to the sum of a and b.
 */
-// * Add your code BELOW here
+const a = 10;
+const b = 5;
+const c = a + b;
 
 // * Don't mess with the test code below here!
 test('arithmetic sum', () => {
   expect(typeof a).toBe('number');
   expect(() => {
-    // Prove immutability by attempting to reassign a
     a = '🙉';
   }).toThrow();
   expect(typeof b).toBe('number');
@@ -57,13 +53,9 @@ test('arithmetic sum', () => {
 /* ==============================
    SKILL 2: Creating a Random Floating-Point Number 🍎
    ==============================
-   Explanation:
-   - Math.random() returns a random number between 0 (inclusive) and 1 (exclusive).
-
-   TODO: This skill requires 1 line of code.
    TODO: Use the Math object to assign a random number to a variable called rnd.
 */
-// * Add your code BELOW here
+const rnd = Math.random();
 
 // * Don't mess with the test code below here!
 test('rnd', () => {
@@ -75,17 +67,10 @@ test('rnd', () => {
 /* ==============================
    SKILL 3: Creating a Random Integer 🍎
    ==============================
-   Explanation:
-   - To create a random integer within a range, multiply Math.random() by the range
-   - and use Math.floor() to round down.
-   - For this exercise, the integer should be between 0 (inclusive) and 5 (exclusive),
-   - so possible values are 0, 1, 2, 3, or 4.
-
-   TODO: This skill requires 1 line of code.
    TODO: Use the Math object to assign a random integer to a variable called randomInt,
-   TODO: ensuring it is between 0 and 5 (use Math.floor appropriately).
+   ensuring it is between 0 and 5 (use Math.floor appropriately).
 */
-// * Add your code BELOW here
+const randomInt = Math.floor(Math.random() * 5);
 
 // * Don't mess with the test code below here!
 vi.spyOn(global.Math, 'random').mockReturnValue(0.9);
@@ -102,19 +87,16 @@ test('randomInt', () => {
 /* ==============================
    SKILL 4: Rounding Down a Number with Math.floor() 🍎
    ==============================
-   Explanation:
-   - Use Math.floor() to round a floating-point number down to its nearest integer.
-
-   TODO: This skill requires 2 lines of code.
-   TODO: In line 1, using const, declare a variable called num and assign it the value 17.89.
-   TODO: In line 2, declare a variable called numRounded and assign it the value of num rounded down (use Math.floor).
+   TODO:
+   - Declare a constant called num and assign it the value 17.89.
+   - Declare a variable called numRounded and assign it the value of num rounded down (use Math.floor).
 */
-// * Add your code BELOW here
+const num = 17.89;
+let numRounded = Math.floor(num);
 
 // * Don't mess with the test code below here!
 test('numRounded', () => {
   expect(() => {
-    // Prove that num is a constant by trying to reassign it.
     num = '🙈';
   }).toThrow();
   expect(typeof num).toBe('number');
@@ -126,21 +108,14 @@ test('numRounded', () => {
 /* ==============================
    SKILL 5: Rounding to Nearest Integer 🍎
    ==============================
-   Explanation:
-   - Use Math.round() to round a number to the nearest integer.
-   - This skill requires handling three cases:
-   - Values above .5 round up; values exactly .5 round up; values below .5 round down.
-
-   TODO: This skill requires 6 lines of code.
    TODO:
-         1. Declare a variable called rounding1 (using let) with the value 5.95.
-         2. Round rounding1 to the nearest integer.
-         3. Declare a variable called rounding2 (using let) with the value 5.5.
-         4. Round rounding2 to the nearest integer.
-         5. Declare a variable called rounding3 (using let) with the value 5.05.
-         6. Round rounding3 to the nearest integer.
+   1. Declare a variable called rounding1 (using let) with the value 5.95 and round it.
+   2. Declare a variable called rounding2 (using let) with the value 5.5 and round it.
+   3. Declare a variable called rounding3 (using let) with the value 5.05 and round it.
 */
-// * Add your code BELOW here
+let rounding1 = Math.round(5.95);
+let rounding2 = Math.round(5.5);
+let rounding3 = Math.round(5.05);
 
 // * Don't mess with the test code below here!
 test('rounding', () => {
@@ -155,20 +130,16 @@ test('rounding', () => {
 /* ==============================
    SKILL 6: Converting a String to a Number using parseInt() 🍎
    ==============================
-   Explanation:
-   - parseInt() converts a string to an integer.
-   - Be sure to properly escape any characters in the string literal as needed.
-
-   TODO: This skill requires 2 lines of code.
-   TODO: In line 1, declare a variable called orderBagels (using let) and assign it the string '13 is a Baker\'s Dozen'.
-   TODO: In line 2, declare a constant called bakersDozen and assign it the result of parseInt(orderBagels).
+   TODO:
+   - Declare a variable called orderBagels (using let) and assign it the string '13 is a Baker\'s Dozen'.
+   - Declare a constant called bakersDozen and assign it the result of parseInt(orderBagels).
 */
-// * Add your code BELOW here
+let orderBagels = "13 is a Baker's Dozen";
+const bakersDozen = parseInt(orderBagels);
 
 // * Don't mess with the test code below here!
 test('bakersDozen', () => {
   expect(() => {
-    // Prove immutability by attempting to reassign bakersDozen.
     bakersDozen = '🙈';
   }).toThrow();
   expect(typeof orderBagels).toBe('string');
@@ -180,25 +151,19 @@ test('bakersDozen', () => {
 /* ==============================
    SKILL 7: Converting a Number to a String using .toFixed() 🍎
    ==============================
-   Explanation:
-   - The .toFixed() method converts a number to a string and rounds it to a specified
-   - number of decimal places.
-
-   TODO: This skill requires 2 lines of code.
-   TODO: In line 1, declare a constant called myPi (using const) and assign it the value 3.141592653589793.
-   TODO: In line 2, declare a constant called myPiFixed (using const) and assign it the result
-   TODO: of calling myPi.toFixed(4) to get a string with four decimal places.
+   TODO:
+   - Declare a constant called myPi (using const) and assign it the value 3.141592653589793.
+   - Declare a constant called myPiFixed (using const) and assign it the result of myPi.toFixed(4).
 */
-// * Add your code BELOW here
+const myPi = 3.141592653589793;
+const myPiFixed = myPi.toFixed(4);
 
 // * Don't mess with the test code below here!
 test('myPiFixed', () => {
   expect(() => {
-    // Prove immutability by attempting to reassign myPi.
     myPi = '🙈';
   }).toThrow();
   expect(() => {
-    // Prove immutability by attempting to reassign myPiFixed.
     myPiFixed = '🙊';
   }).toThrow();
   expect(typeof myPi).toBe('number');
@@ -210,20 +175,14 @@ test('myPiFixed', () => {
 /* ==============================
    SKILL 8: Converting a String to a Number using the Unary + Operator 🍎
    ==============================
-   Explanation:
-   - The unary + operator converts a string to a number.
-   - Here, you convert the string version of myPiFixed back to a number.
-
-   TODO: This skill requires 1 line of code.
-   TODO: Using the let keyword, declare a variable called sliceOfPi and assign it to
-   TODO: the value of myPiFixed converted to a number using the unary + operator.
+   TODO:
+   - Using the let keyword, declare a variable called sliceOfPi and assign it to the value of myPiFixed converted to a number using the unary + operator.
 */
-// * Add your code BELOW here
+let sliceOfPi = +myPiFixed;
 
 // * Don't mess with the test code below here!
 test('sliceOfPi', () => {
   expect(() => {
-    // Prove immutability by attempting to reassign myPiFixed.
     myPiFixed = '🙊';
   }).toThrow();
   expect(typeof sliceOfPi).toBe('number');

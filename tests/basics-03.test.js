@@ -7,7 +7,7 @@
  *     undefined, and null in JavaScript.
  *   - Each SKILL section explains a specific concept and provides a TODO for
  *     students to fill in one or two lines of code.
- *   - Run the tests using Vitest (e.g. by running "npm test" if your package.json
+ *   - Run the tests using Vitest (for example, via "npm test" if your package.json
  *     has an appropriate test script).
  *   - ESLint rules are disabled to keep focus on learning the language basics.
  *
@@ -32,7 +32,7 @@
    TODO: Use the let keyword to declare a variable called isSeptember and assign it
    TODO: to the boolean value true.
 */
-// * Add your code BELOW here
+let isSeptember = true;
 
 // * Don't mess with the test code below here!
 test('isSeptember', () => {
@@ -54,7 +54,7 @@ test('isSeptember', () => {
    TODO: Use the let keyword to create a variable called isFalsy and assign it to
    TODO: any one of the six falsy types of your choice.
 */
-// * Add your code BELOW here
+let isFalsy = '';  // using empty string (falsy)
 
 // * Don't mess with the test code below here!
 test('isFalsy', () => {
@@ -73,7 +73,7 @@ test('isFalsy', () => {
    TODO: Use the let keyword to create a variable called isTruthy and assign it
    TODO: any truthy value (but do not use the literal true).
 */
-// * Add your code BELOW here
+let isTruthy = "yes";  // non-empty string is truthy
 
 // * Don't mess with the test code below here!
 test('isTruthy', () => {
@@ -92,7 +92,7 @@ test('isTruthy', () => {
    TODO: Use the let keyword to declare a variable called notAssigned and leave it
    TODO: unassigned.
 */
-// * Add your code BELOW here
+let notAssigned;  // declared without assignment
 
 // * Don't mess with the test code below here!
 test('notAssigned', () => {
@@ -111,7 +111,7 @@ test('notAssigned', () => {
    TODO: This skill requires 1 line of code.
    TODO: Use the let keyword to declare a variable called bloop and assign it to null.
 */
-// * Add your code BELOW here
+let bloop = null;
 
 // * Don't mess with the test code below here!
 test('bloop', () => {
@@ -131,7 +131,7 @@ test('bloop', () => {
    TODO: Use the let keyword to declare a variable called notSeptember and assign it
    TODO: to the boolean value of !isSeptember.
 */
-// * Add your code BELOW here
+let notSeptember = !isSeptember;
 
 // * Don't mess with the test code below here!
 test('notSeptember', () => {
@@ -151,7 +151,8 @@ test('notSeptember', () => {
    TODO: Create a variable called user and assign it to an empty string (using single quotes).
    TODO: Use the let keyword to declare a variable called isLoggedIn and assign it the boolean value of !!user.
 */
-// * Add your code BELOW here
+let user = '';
+let isLoggedIn = !!user;
 
 // * Don't mess with the test code below here!
 test('isLoggedIn', () => {

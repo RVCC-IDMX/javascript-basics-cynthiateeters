@@ -25,7 +25,7 @@
    TODO: This skill requires 1 line of code.
    TODO: Use the let keyword to declare a variable called myName and do NOT assign it a value.
 */
-// * Add your code BELOW here
+let myName; // myName is declared but not assigned, so its value is undefined
 
 // * Don't mess with the test code below here!
 test('myName', () => {
@@ -43,7 +43,7 @@ test('myName', () => {
    TODO: This skill requires 1 line of code.
    TODO: Use the let keyword to create a variable called age and assign it the number literal 22.
 */
-// * Add your code BELOW here
+let age = 22; // age is assigned the number literal 22
 
 // * Don't mess with the test code below here!
 test('age', () => {
@@ -61,13 +61,12 @@ test('age', () => {
    TODO: This skill requires 1 line of code.
    TODO: Use the const keyword to create a constant called daysInWeek and assign it the number literal 7.
 */
-// * Add your code BELOW here
+const daysInWeek = 7; // daysInWeek is declared as a constant and set to 7
 
 // * Don't mess with the test code below here!
 test('daysInWeek', () => {
   expect(() => {
     // Prove immutability by attempting to reassign
-
     daysInWeek = '🙉';
   }).toThrow();
   expect(typeof daysInWeek).toBe('number');
@@ -86,7 +85,8 @@ test('daysInWeek', () => {
    TODO: In the second line, assign myWorkDays the value of the constant daysInWeek.
    TODO: DO NOT use the number literal 7 directly.
 */
-// * Add your code BELOW here
+let myWorkDays;
+myWorkDays = daysInWeek; // myWorkDays now holds the value of daysInWeek
 
 // * Don't mess with the test code below here!
 test('myWorkDays', () => {
@@ -108,11 +108,10 @@ test('myWorkDays', () => {
    TODO: In the second line, create a variable called sillyMath and leave it undefined.
    TODO: In the third line, assign sillyMath to the product of oops multiplied by 2.
    TODO: (Use the * operator for multiplication.)
-
-   Challenge:
-   - Consider why the result is NaN and why NaN does not equal any other value.
 */
-// * Add your code BELOW here
+let oops;               // oops is declared but remains undefined
+let sillyMath;          // sillyMath is declared
+sillyMath = oops * 2;   // multiplying undefined by 2 results in NaN
 
 // * Don't mess with the test code below here!
 test('sillyMath', () => {
@@ -132,7 +131,8 @@ test('sillyMath', () => {
    TODO: In the first line, create a variable called sillyString and leave it undefined.
    TODO: In the second line, assign sillyString to the string 'Hello, ' concatenated with oops.
 */
-// * Add your code BELOW here
+let sillyString;
+sillyString = 'Hello, ' + oops;  // 'oops' is undefined, so the result is 'Hello, undefined'
 
 // * Don't mess with the test code below here!
 test('sillyString', () => {
@@ -150,7 +150,9 @@ test('sillyString', () => {
    TODO: Create a constant called taxRate and assign it the value 0.2.
    (Make sure to use let for variables and const for constants.)
 */
-// * Add your code BELOW here
+let year = 2022;
+let firstName = 'John';
+const taxRate = 0.2;
 
 // * Don't mess with the test code below here!
 test('year', () => {
@@ -172,12 +174,12 @@ test('taxRate', () => {
    RECAP & REVIEW
    ==============================
    Key concepts covered:
-   - Declaring variables with let vs. const.
-   - The difference between declaring a variable and assigning a value.
-   - How uninitialized variables behave in arithmetic operations (resulting in NaN).
-   - How undefined values are concatenated with strings.
+     - Declaring variables with let vs. const.
+     - The difference between declaring a variable and assigning a value.
+     - How uninitialized variables behave in arithmetic operations (resulting in NaN).
+     - How undefined values are concatenated with strings.
 
    Challenge Question:
-   - Why does multiplying an undefined variable result in NaN, and why does NaN not equal any value, including itself?
-   (Discuss with your peers or research the IEEE 754 standard for floating-point arithmetic.)
+     - Why does multiplying an undefined variable result in NaN, and why does NaN not equal any value, including itself?
+     (Discuss with your peers or research the IEEE 754 standard for floating-point arithmetic.)
 */
