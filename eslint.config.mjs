@@ -22,6 +22,7 @@ export default [
       'no-undef-init': 'off',
       'prefer-template': 'off',
       'radix': 'off',
+      'no-const-assign': 'off',
       // Add additional custom rules here.
     }
   }
